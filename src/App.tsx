@@ -1,13 +1,19 @@
-import { useState } from 'react'
+import useCocteles from "./components/hooks/useCocteles";
+import Card from "./components/card/card"
 import './App.css'
 
 function App() {
-
+  const {cocteles}= useCocteles()
 
   return (
     <>
-      <h1>a ver s jala esta madre</h1>
-      <h1>prueba 3|9u|71289</h1>
+      <div className="cards-grid">
+        {cocteles.map(p => (
+          <Card key={p.idDrink}
+          name={p.strDrink}
+          image={p.strDrinkThumb}/>
+        ))}
+      </div>
 
     </>
   )
