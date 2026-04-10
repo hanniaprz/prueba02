@@ -22,7 +22,7 @@ const useCocteles = () => {
             //(p: CharacterAPI) -> es cada bebida con esa forma y en lo de id,str es que toma el valor de la API
             const listadoReal: Coctel[] = datos.drinks.map((p:CharacterAPI) => ({
                 idDrink: p.idDrink,
-                strDtrink: p.strDrink,
+                strDrink: p.strDrink,
                 strDrinkThumb: p.strDrinkThumb,
             }));
             setCocteles(listadoReal);
